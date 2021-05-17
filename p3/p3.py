@@ -1,3 +1,6 @@
+import argparse
+
+
 
 def swapcase_decorator(func):
     def wrapper(file_path):
@@ -29,3 +32,10 @@ while StopIteration:
 
 
 
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(action='store', metavar='FILE_PATH',dest= 'file_path' , help='enter file path')
+
+    args = parser.parse_args()
+    duplicate_words_gen(file_path=args)
